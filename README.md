@@ -1,13 +1,14 @@
 # Web Project Finaktiva
 
-acontinuacion describire brevemente la solucion de la prueba tecnica del Backend Finaktiva!
+a continuación describiré brevemente la solución de la prueba técnica del Backend Finaktiva!
+
 ### Pre-requisitos 📋
 
-Para la ejecucion del proyecto se debe contar con Visual Studio y SQL SERVER
+Para la ejecución del proyecto se debe contar con Visual Studio y SQL SERVER
 
 ### Base de datos 🔧
 
-El proyecto esta corriendo con el string Connection Local de la maquina (localdb)\\MSSQLLocalDB
+El proyecto esta corriendo con el string Connection Local de la máquina (localdb)\\MSSQLLocalDB
 
 ## Estructura 🚀
 
