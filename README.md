@@ -30,4 +30,56 @@ En esta capa se encuentra toda la logica que negocio del proyecto.
 ## Presentación 🛠️
 
 En esta capa se encuentra el proyecto Backend hecho en Frameword .Net Core 3.1
-En este proyecto tiene un controlador llamado UserController en cual contiene los servicios expuestos para el consumo REST.
+En este proyecto tiene un controlador llamado UsersController en cual contiene los servicios expuestos para el consumo REST.
+
+El controllador contiene los Siguentes Servicios
+
+* api/Users/Authenticate - Este Servicio se encarga de loguear el usuario
+    Recibe como parametros es siguente JSON:
+    ```
+    {
+        "Username":"string",
+        "Password":"string"
+    }
+    ```
+
+* api/users/Register - Este Servicio se encarga registrar al usuario
+    Recibe como parametros es siguente JSON:
+    ```
+    {
+    "FirstName": "string",
+    "LastName": "string",
+    "Username": "string",
+    "Password":"string",
+    "RolId": int
+    }
+    ```
+
+* api/users/CreateUser - Este Servicio se encarga crear un usuario y solo el adminitrador puede utilizar este servicio
+    Recibe como parametros es siguente JSON:
+    ```
+    {
+    "FirstName": "string",
+    "LastName": "string",
+    "Username": "string",
+    "Password":"string",
+    "RolId": int
+    }
+    ```
+
+* api/users/UpdateUser - Este Servicio se encarga de actualizar un usuario y solo el adminitrador puede utilizar este servicio
+    Recibe como parametros es siguente JSON:
+    ```
+    {
+    "Id":"string",
+    "FirstName": "string",
+    "LastName": "string",
+    "Username": "string",
+    "Password":"string",
+    "RolId": int
+    }
+    ```
+
+* api/users/DeleteUser?userId=string - Este Servicio se encarga de eliminar un usuario recibe como parametro el userID y solo el adminitrador puede utilizar este servicio
+
+* api/users/getAll - Este usuario se encarga de mostrar todos los usuarios creados y los usuarios Administradores y operativos pueden utilizar este servicio

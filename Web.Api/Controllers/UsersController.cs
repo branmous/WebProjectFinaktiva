@@ -37,6 +37,25 @@ namespace Web.Api.Controllers
             return response;
         }
 
+        [HttpPost("Register")]
+        public async Task<Response<bool>> Register(UserRequest model)
+        {
+            Response<bool> response = new Response<bool>();
+
+            try
+            {
+                response.Data = await _userService.Create(model);
+                response.Header.Message = "Successfully registered user!";
+            }
+            catch (Exception ex)
+            {
+                response.Header.Code = 500;
+                response.Header.Message = ex.Message;
+            }
+
+            return response;
+        }
+
         [Authorize]
         [HttpPost("CreateUser")]
         public async Task<Response<bool>> CreateUser(UserRequest model)
